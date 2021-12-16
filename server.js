@@ -1,7 +1,7 @@
 const app = require("./app.js");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
-const { response } = require("express");
+const  express = require("express");
 
 
 //to connect 'config.env' file
