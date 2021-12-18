@@ -18,7 +18,9 @@ export default function AllEmployees(){
     //fetching all-employees data from the database
     const getAllEmployees = async (slectValue) => {
         const response = await getEmployeesFromApi(slectValue);
+        
         setUsers(response.data);
+        
     }
 
     useEffect(() => {
@@ -48,6 +50,8 @@ export default function AllEmployees(){
         //setBtnPop(true)
         setPop(userData.data);
     }
+
+
 
      return(<>
               <div className={clss.allEmpContainer}>

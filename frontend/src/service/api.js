@@ -2,7 +2,7 @@ import axios from 'axios';
 
 
 
-const url = "https://crudmernemp.herokuapp.com";  //nodejs server url.
+const url = "https://crudmernemp.herokuapp.com/emp";  //nodejs server url.
 
 //it is to get value from the database currently which is from 'Database/db.json'.
 //exporting to allEmployee.jsx file 
@@ -11,9 +11,12 @@ export async function getEmployeesFromApi(slectValue) {
     try{
         let rspns
         if(slectValue.length !== 0){
+            console.log(`${url}/${slectValue}`);
              rspns = await axios.get(`${url}/${slectValue}`);
         } else {
+            console.log(url);
              rspns = await axios.get(url);
+             
         }
         return rspns;
     }catch(err){

@@ -6,6 +6,7 @@ exports.getEmp = async (req, res) => {
 
     try{
         const empDatafromMongo = await Employee.find();
+        console.log(empDatafromMongo);
         res.status(200).json(empDatafromMongo);
     }catch(err){
         res.status(404).json({
