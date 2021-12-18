@@ -7,7 +7,7 @@ import EditEmployee from './components/EditEmployee.jsx';
 import NotFound from "./components/NotFound.jsx";
 import Footer from "./components/Footer.jsx";
 import { makeStyles } from '@material-ui/core';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 
 const classes = makeStyles({
     superContainer_v: {
@@ -23,7 +23,7 @@ function App() {
 
   return (
           
-           <BrowserRouter>
+           <HashRouter>
               <NavBar />
               <div className={clss.superContainer_v}>
                <Switch>
@@ -36,7 +36,7 @@ function App() {
                <Footer />
                </div>
                 
-            </BrowserRouter>
+            </HashRouter>
             
           );
 }
