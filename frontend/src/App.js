@@ -17,7 +17,7 @@ const classes = makeStyles((theme) => ({
     },
     [theme.breakpoints.down('sm')]: {
       superContainer_v: {
-         width: "38vmax",
+         width: "42vmax",
       }
     }
 }))
