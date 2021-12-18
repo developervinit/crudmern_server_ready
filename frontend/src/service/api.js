@@ -12,10 +12,10 @@ export async function getEmployeesFromApi(slectValue) {
         let rspns
         if(slectValue.length !== 0){
             console.log(`${url}/${slectValue}`);
-             rspns = await axios.get(`${url}/allemp/${slectValue}`);
+             rspns = await axios.get(`${url}/${slectValue}`);
         } else {
             console.log(url);
-             rspns = await axios.get(`${url}/allemp`);
+             rspns = await axios.get(url);
              
         }
         return rspns;
