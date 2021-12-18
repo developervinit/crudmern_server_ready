@@ -190,40 +190,40 @@ export const footrEmpclasses = makeStyles({
 })
 
 //for home-component
-export const homeEmpclasses = makeStyles({
-    container: {
-        width: "44vmax",
-        textAlign: "center",
-        position: "relative",
-        margin: "auto",
-        marginTop: "260px"
-    },
-    HomeBtnCreat: {
-        backgroundColor: "#a8d96f",
-        color: "#4e850d",
-        padding: "8px 24px",
-        fontSize: "16px",
-        fontFamily: "Red Hat Display, sans-serif",
-        boxShadow: "1px 1px 1px 1px #81b841",
-        fontWeight: "600"
-     },
-    hello: {
-        fontFamily: "'Red Hat Display', sans-serif",
-        color: "#91555e",
-        fontSize: "54px",
-        textShadow: "0px 0px 4px #b2b1b1"
-    },
-    HomePStyle: {
-        color: "#c7a3a9",
-        width: "44vmax",
-        margin: "auto",
-        fontSize: "14px",
-        marginTop: "60px",
-        textAlign: "center",
-        fontFamily: "Red Hat Display, sans-serif"
-    },
+// export const homeEmpclasses = makeStyles({
+//     container: {
+//         width: "44vmax",
+//         textAlign: "center",
+//         position: "relative",
+//         margin: "auto",
+//         marginTop: "260px"
+//     },
+//     HomeBtnCreat: {
+//         backgroundColor: "#a8d96f",
+//         color: "#4e850d",
+//         padding: "8px 24px",
+//         fontSize: "16px",
+//         fontFamily: "Red Hat Display, sans-serif",
+//         boxShadow: "1px 1px 1px 1px #81b841",
+//         fontWeight: "600"
+//      },
+//     hello: {
+//         fontFamily: "'Red Hat Display', sans-serif",
+//         color: "#91555e",
+//         fontSize: "54px",
+//         textShadow: "0px 0px 4px #b2b1b1"
+//     },
+//     HomePStyle: {
+//         color: "#c7a3a9",
+//         width: "44vmax",
+//         margin: "auto",
+//         fontSize: "14px",
+//         marginTop: "60px",
+//         textAlign: "center",
+//         fontFamily: "Red Hat Display, sans-serif"
+//     },
 
-})
+// })
 
 //for NavBar-component
 export const navEmpclasses = makeStyles({
