@@ -3,7 +3,7 @@ import { Button, makeStyles } from '@material-ui/core';
 import { Link } from "react-router-dom";
 //import { homeEmpclasses } from "../cssstyle/MuiStyle.js";
 
- const homeEmpclasses = makeStyles({
+ const homeEmpclasses = makeStyles((theme) => ({
   container: {
       width: "44vmax",
       textAlign: "center",
@@ -34,9 +34,14 @@ import { Link } from "react-router-dom";
       marginTop: "60px",
       textAlign: "center",
       fontFamily: "Red Hat Display, sans-serif"
+  },
+  [theme.breakpoints.down('sm')]: {
+    container: {
+      width: "37vmax"
+    }
   }
 
-});
+}));
 
 
 export default function Home() {

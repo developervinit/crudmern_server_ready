@@ -50,7 +50,7 @@ const schema = yup.object().shape({
     },
     [theme.breakpoints.down('sm')]: {
       editFormContainer: {
-        width: "48vmax"
+        width: "37vmax"
     },
     editEmp_head: {
       width: "374px"

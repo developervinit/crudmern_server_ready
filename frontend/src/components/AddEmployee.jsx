@@ -46,7 +46,7 @@ const schema = yup.object().shape({
       },
       [theme.breakpoints.down('sm')]: {
         newEmpFormContainer: {
-          width: "48vmax",
+          width: "37vmax",
         },
       }
 }));        
