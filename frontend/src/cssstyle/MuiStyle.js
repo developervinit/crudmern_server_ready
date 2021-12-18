@@ -1,7 +1,7 @@
 import { makeStyles } from '@material-ui/core';
 
 
-//for AddUser-component
+//for AddEmp-component
 export const addEmpclasses = makeStyles({
     newEmpFormContainer: {
         width: "39vmax",
@@ -30,7 +30,7 @@ export const addEmpclasses = makeStyles({
       },
 })      
 
-//for AllUser-component
+//for AllEmp-component
 export const allEmpclasses = makeStyles({
     allEmp_H1:{
         marginTop: "100px",
@@ -116,7 +116,7 @@ export const allEmpclasses = makeStyles({
     },
 })
 
-//for Edit-component
+//for EditEmp-component
 export const editEmpclasses = makeStyles({
     editFormContainer: {
         width: "39vmax",
@@ -159,7 +159,6 @@ export const errEmpclasses = makeStyles({
         backgroundColor: "#ff8279",
         boxShadow: "0px 1px 5px 1px #d7929c",
         width: "30vmax",
-        top: "80px",
         margin: "auto",
         top: "90px",
         right: "0",
