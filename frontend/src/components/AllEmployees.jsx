@@ -5,7 +5,7 @@ import { Table, TableHead, TableRow, TableCell, TableBody, Button, Select, MenuI
 //import { allEmpclasses } from "../cssstyle/MuiStyle.js"; 
 import PopUp from "./PopUp.jsx";
 
- const allEmpclasses = makeStyles({
+ const allEmpclasses = makeStyles((theme) => ({
   allEmp_H1:{
       marginTop: "100px",
       fontFamily: "Red Hat Display, sans-serif",
@@ -88,7 +88,20 @@ import PopUp from "./PopUp.jsx";
       fontWeight: "600",
       marginRight: "8px"
   },
-})
+  [theme.breakpoints.down('sm')]: {
+    allEmp_TotalValueWrpr: {
+      marginLeft: "0px",
+      marginTop: "35px",
+    },
+    allEmp_EdtBtn: {
+      marginBottom: "10px"
+    },
+    allEmp_ViewBtn: {
+      marginBottom: "10px"
+  },
+
+  }
+}))
 
 
 

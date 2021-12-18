@@ -34,9 +34,9 @@ import { Link } from "react-router-dom";
       marginTop: "60px",
       textAlign: "center",
       fontFamily: "Red Hat Display, sans-serif"
-  },
+  }
 
-})
+});
 
 
 export default function Home() {

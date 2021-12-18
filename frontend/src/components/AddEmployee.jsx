@@ -18,7 +18,7 @@ const schema = yup.object().shape({
   });
 
 
- const addEmpclasses = makeStyles({
+ const addEmpclasses = makeStyles((theme) => ({
     newEmpFormContainer: {
         width: "39vmax",
         maxWidth: "600px",
@@ -44,7 +44,12 @@ const schema = yup.object().shape({
         color: "red",
         marginTop: "4px"
       },
-})        
+      [theme.breakpoints.down('sm')]: {
+        newEmpFormContainer: {
+          width: "48vmax",
+        },
+      }
+}));        
 
     
 //AddEmployee component

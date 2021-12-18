@@ -9,13 +9,18 @@ import Footer from "./components/Footer.jsx";
 import { makeStyles } from '@material-ui/core';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 
-const classes = makeStyles({
+const classes = makeStyles((theme) => ({
     superContainer_v: {
        width: "88vmax",
        margin: "auto",
        position: "relative"
+    },
+    [theme.breakpoints.down('sm')]: {
+      superContainer_v: {
+         width: "52vmax",
+      }
     }
-})
+}))
 
 function App() {
 

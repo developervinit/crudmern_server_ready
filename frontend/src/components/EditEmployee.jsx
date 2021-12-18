@@ -20,7 +20,7 @@ const schema = yup.object().shape({
 
 
 
- const editEmpclasses = makeStyles({
+ const editEmpclasses = makeStyles((theme) => ({
   editFormContainer: {
       width: "39vmax",
       maxWidth: "600px",
@@ -48,7 +48,15 @@ const schema = yup.object().shape({
   editEmp_err: {
       color: "red"
     },
-})  
+    [theme.breakpoints.down('sm')]: {
+      editFormContainer: {
+        width: "48vmax"
+    },
+    editEmp_head: {
+      width: "374px"
+    },
+  }
+}))  
 
 
 
