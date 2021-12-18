@@ -1,9 +1,95 @@
 import React, { useEffect, useState } from 'react';
-import { getEmployeesFromApi, deleteOneEmployee, getEditEmployee } from "../service/api.js";
+import { getEmployeesFromApi, deleteOneEmployee, getEditEmployee  } from "../service/api.js";
 import { Link } from 'react-router-dom';
-import { Table, TableHead, TableRow, TableCell, TableBody, Button, Select, MenuItem, InputLabel, FormControl } from '@material-ui/core';
-import { allEmpclasses } from "../cssstyle/MuiStyle.js"; 
+import { Table, TableHead, TableRow, TableCell, TableBody, Button, Select, MenuItem, InputLabel, FormControl, makeStyles } from '@material-ui/core';
+//import { allEmpclasses } from "../cssstyle/MuiStyle.js"; 
 import PopUp from "./PopUp.jsx";
+
+ const allEmpclasses = makeStyles({
+  allEmp_H1:{
+      marginTop: "100px",
+      fontFamily: "Red Hat Display, sans-serif",
+      color: "#8b646e"
+  },
+  allEmp_FilerFormSelct:{
+      display: "inline-block",
+      verticalAlign: "baseline"
+  },
+  allEmp_InptLable: {
+      fontSize: "19px",
+      color: "#8b646e"
+  },
+  allEmp_Selct: {
+      width: "300px"
+  },
+  allEmp_DashBoard: {
+      backgroundColor: "#f7e4e9",
+      padding: "14px 14px",
+      borderRadius: "8px",
+      boxShadow: "0px 0px 9px 0px #cecece;"
+  },
+  allEmp_TotalValueWrpr: {
+      display: "inline-block",
+      verticalAlign: "baseline",
+      fontFamily: "Red Hat Display, sans-serif",
+      fontSize: "22px",
+      marginLeft: "40px",
+      backgroundColor: "#f6d4dd",
+      padding: "4px 12px",
+      borderRadius: "13px",
+      color: "#a45f71",
+      fontWeight: "600"
+  },
+  allEmp_TableContnr: {
+      overflowX: "scroll"
+  },
+  allEmp_Table: {
+      boxShadow: "0px 0px 9px 0px #cecece;",
+      marginTop: "14px"
+  },
+  allEmp_TableRow: {
+      '& > *': {
+          textAlign: 'left',
+          fontSize: "20px",
+          backgroundColor: "#f7e4e9",
+          color: "#9d7881",
+          fontWeight: "600"
+      }
+  },
+  allEmp_BodyTableRow: {
+      '& > *': {
+          textAlign: 'left',
+          fontSize: "18px",
+          color: "#ab8a93"
+      }
+  },
+  allEmp_EmptyMsge: {
+      color: "#a45f71",
+      margin: "22px",
+      fontFamily: "Red Hat Display, sans-serif",
+  },
+  allEmp_EdtBtn: {
+      color: "#3171a3",
+      boxShadow: "1px 1px 1px 1px #3283c6",
+      backgroundColor: "#5baaea",
+      fontWeight: "600",
+      marginRight: "8px"
+  },
+  allEmp_DeltBtn: {
+      backgroundColor: "#fc7272",
+      color: "#c03737",
+      boxShadow: "1px 1px 1px 1px #de3e3e",
+      fontWeight: "600"
+  },
+  allEmp_ViewBtn: {
+      backgroundColor: "#a8d96f",
+      color: "#538a12",
+      boxShadow: "1px 1px 1px 1px #83ba44",
+      fontWeight: "600",
+      marginRight: "8px"
+  },
+})
+
 
 
 //this component to show all-user data

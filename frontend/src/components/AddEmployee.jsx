@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { addNewEmployee } from "../service/api.js"
-import { FormGroup, FormControl, Input, InputLabel, Button, Select, MenuItem } from "@material-ui/core";
+import { FormGroup, FormControl, Input, InputLabel, Button, Select, MenuItem, makeStyles } from "@material-ui/core";
 import { useHistory } from 'react-router-dom'
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import ErrPop from "./ErrPop.jsx";
-import { addEmpclasses } from "../cssstyle/MuiStyle.js"; 
+//import { addEmpclasses } from "../cssstyle/MuiStyle.js"; 
 
 //schema for validadtion for frontend using "useForm", "yup", "yupResolver".
 const schema = yup.object().shape({
@@ -17,8 +17,37 @@ const schema = yup.object().shape({
     phone: yup.string().min(10).max(10).required()
   });
 
+
+ const addEmpclasses = makeStyles({
+    newEmpFormContainer: {
+        width: "39vmax",
+        maxWidth: "600px",
+        minWidth: "200px",
+        margin: "auto",
+        marginTop: "140px"
+      },
+    head: {
+        fontFamily: "Red Hat Display, sans-serif",
+        color: "#8b646e",  
+      },
+    AddEmpBtn: {
+        backgroundColor: "#a8d96f",
+        color: "#4e850d",
+        padding: "8px 24px",
+        fontSize: "16px",
+        fontFamily: "Red Hat Display, sans-serif",
+        boxShadow: "1px 1px 1px 1px #81b841",
+        fontWeight: "600",
+        marginBottom: "14px"
+      },
+    err: {
+        color: "red",
+        marginTop: "4px"
+      },
+})        
+
     
-//AddUser component
+//AddEmployee component
 export default function AddEmployee(){
 
   const { register, formState: { errors }, handleSubmit } = useForm({

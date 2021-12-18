@@ -1,7 +1,30 @@
 import React from 'react';
-import { Button } from '@material-ui/core';
-import { notFndEmpclasses } from "../cssstyle/MuiStyle.js";
+import { Button, makeStyles } from '@material-ui/core';
+//import { notFndEmpclasses } from "../cssstyle/MuiStyle.js";
 
+
+ const notFndEmpclasses = makeStyles({
+   notFndEmp_Contnr: {
+       marginTop: '200px',
+       position: "relative",
+       width: "50vmax",
+       margin: "auto",
+       marginBottom: "292px"
+   },    
+   notFndEmp_Messg: {
+       fontFamily: "Red Hat Display, sans-serif",
+       color: "#8b646e",
+     },
+   notFndEmp_Code: {
+       fontFamily: "Red Hat Display, sans-serif",
+       color: "#8b646e",
+       fontWeight: "900"
+     },
+   notFndEmp_Btn: {
+       color: "#8b646e",
+       backgroundColor: "white"
+   }  
+});
 
 export default function NotFound(){
 

@@ -1,7 +1,34 @@
-import { AppBar, Toolbar } from '@material-ui/core';
+import { AppBar, Toolbar, makeStyles } from '@material-ui/core';
 import { NavLink, useLocation } from "react-router-dom";
 import clsx from "clsx";
-import { navEmpclasses } from "../cssstyle/MuiStyle.js";
+//import { navEmpclasses } from "../cssstyle/MuiStyle.js";
+
+
+ const navEmpclasses = makeStyles({
+    
+  navEmp_header: {
+      background: "#cdeea7",
+      color: "white",
+      display: "flex",
+      alignItems: "center"
+    },
+  
+  navEmp_menus: {
+      textDecoration: "none",
+      color: "#4e850d",
+      marginRight: "12px",
+      fontFamily: "Red Hat Display, sans-serif",
+      fontWeight: "600",
+      fontSize: "18px",
+      background: "#a8d96f",
+      padding: "6px 12px",
+      borderRadius: "6px",
+      boxShadow: "1px 1px 1px 1px #81b841"
+    },
+  navEmp_active: {
+      boxShadow: "1px 1px 6px 1px #263f09;"
+    },
+  });
 
 
 export default function NavBar(){

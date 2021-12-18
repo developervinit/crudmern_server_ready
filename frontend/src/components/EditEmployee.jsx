@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { getEditEmployee, updateEmployee } from "../service/api.js"
-import { FormGroup, FormControl, Input, InputLabel, Button, Select, MenuItem } from "@material-ui/core";
+import { FormGroup, FormControl, Input, InputLabel, Button, Select, MenuItem, makeStyles } from "@material-ui/core";
 import { useHistory, useParams } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import ErrPop from "./ErrPop.jsx";
-import { editEmpclasses } from "../cssstyle/MuiStyle.js"; 
+//import { editEmpclasses } from "../cssstyle/MuiStyle.js"; 
 
 
 //schema for validadtion
@@ -17,6 +17,38 @@ const schema = yup.object().shape({
   email: yup.string().email().strict().lowercase("email must be in lowercase").required(),
   phone: yup.string().min(10).max(10).required()
 });
+
+
+
+ const editEmpclasses = makeStyles({
+  editFormContainer: {
+      width: "39vmax",
+      maxWidth: "600px",
+      minWidth: "200px",
+      margin: "auto",
+      marginTop: "140px"
+  },
+  editEmp_head: {
+      marginTop: "100px",
+      fontFamily: "Red Hat Display, sans-serif",
+      color: "#8b646e",
+      width: "550px"
+    },
+  editEmp_btn: {
+      marginTop: "32px",
+      backgroundColor: "#a8d96f",
+      color: "#4e850d",
+      padding: "8px 24px",
+      fontSize: "16px",
+      fontFamily: "Red Hat Display, sans-serif",
+      boxShadow: "1px 1px 1px 1px #81b841",
+      fontWeight: "600",
+      marginBottom: "14px"
+    },
+  editEmp_err: {
+      color: "red"
+    },
+})  
 
 
 
